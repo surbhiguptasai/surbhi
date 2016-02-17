@@ -1,0 +1,22 @@
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+th, td {
+	
+    padding: 5px;
+}
+th{
+	height:100px;
+}
+
+tr:nth-child(even){background-color: #4DB34D}
+th {
+    
+    color: blue;
+}
+.cellClass { 
+	background-color: #808080
+	
+ }
+ 
