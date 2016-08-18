@@ -1,0 +1,66 @@
+<html>
+<script>
+function calcform()
+{
+//extract values from the form...
+var Input1=document.getElementById("Input1").value;
+var Input2=document.getElementById("Input2").value;
+var validate=true;
+//validate the inputs...
+if (isNaN(Input1))
+{
+errormsg="Input1 should be number";
+document.getElementById('err1').innerHTML=errormsg;
+document.getElementById('err1').style.color = 'red';
+validate=false;
+}
+if (isNaN(Input2))
+{
+errormsg1="Input2 should be number";
+document.getElementById('err2').innerHTML=errormsg1;
+document.getElementById('err2').style.color = 'red';
+validate=false;
+}
+if (!Boolean(validate ))
+{
+return validate;
+}
+
+//Manipulate the values...
+sum=parseInt(Input1)+parseInt(Input2);
+//Modify the HTML...
+document.getElementById('result').innerHTML=sum;
+return false;
+}
+
+</script>
+<body>
+<form method="POST" action="Cal" onsubmit="return calcform();">
+<table>
+<tr>
+<td>
+Input1:<input type="text" id="Input1">
+</td>
+<td>
+<p id="err1"></p>
+</td>
+</tr>
+<br><br>
+<tr>
+<td>
+Input2:<input type="text" id="Input2">
+</td>
+<td>
+<p id="err2"></p>
+</td>
+</tr>
+<tr>
+<td>
+<input type="Submit" value="Calculate" >
+<p id="result"></p>
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

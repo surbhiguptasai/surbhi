@@ -1,0 +1,17 @@
+<html>
+<script>
+function getloop()
+{
+var str="";
+for(var i=1;i<20;i++)
+{
+str=str+i+"<input type='text'><br>";
+}
+document.getElementById("content").innerHTML=str;
+}
+</script>
+<body>
+<input type="button" value="forloop" onclick="getloop()">
+<div id="content">No Content</div>
+</body>
+</html>

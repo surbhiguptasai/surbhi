@@ -1,0 +1,101 @@
+<html>
+<script>
+function clearbox()
+	{
+	document.getElementById("no1").value="";
+	document.getElementById("operator").value="";
+	document.getElementById("no2").value="";
+	document.getElementById("result").value="";
+	}
+function getoperator(operator)
+	{
+	document.getElementById("operator").value=operator;
+	}
+function getinput(value)
+	{
+	var operator=document.getElementById("operator").value;
+	operator=operator.trim();
+	if (operator=="")
+		{
+		document.getElementById("no1").value=value;
+		}
+		else
+		{
+		document.getElementById("no2").value=value;
+		}
+
+	}
+function getresult()
+{
+var no1=document.getElementById("no1").value;
+var no2=document.getElementById("no2").value;
+var operator=document.getElementById("operator").value;
+no1=parseInt(no1);
+no2=parseInt(no2);
+//var result=no1 operator no2;
+if (operator=="+")
+{result=no1+no2}
+else if(operator=="/")
+{result=no1/no2}
+else if(operator=="-")
+{result=no1-no2}
+else if(operator=="*")
+{result=no1*no2}
+else if(operator=="%")
+{result=no1%no2}
+else
+{result=0;}
+document.getElementById("result").value=result;
+//alert(result);
+}
+	
+
+</script>
+	<body>
+		<div style="height:300px;width:300px;margin:auto;border:10px solid red;">
+			<center>
+			<font size="4"><b>Calculator</b></font><br>
+			</center>
+		<hr color="green">
+			<table cellspacing="8">
+				<tr>
+					<td>No1:<input type="text" id="no1" size="8"></td>
+					<td><input type="text" id="operator" size="4"></td>
+					<td>No2:<input type="text" id="no2" size="8"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">Result:<input type="text" id="result" size="10"></td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<input type="button" id="1" value="1" onclick="getinput(this.id)">
+						<input type="button" id="2" value="2" onclick="getinput(this.id)">
+						<input type="button" id="3" value="3" onclick="getinput(this.id)">
+						<input type="button" id="4" value="4" onclick="getinput(this.id)">
+						<input type="button" id="5" value="5" onclick="getinput(this.id)">
+						<input type="button" id="6" value="6" onclick="getinput(this.id)">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<input type="button" id="7" value="7" onclick="getinput(this.id)">
+						<input type="button" id="8" value="8" onclick="getinput(this.id)">
+						<input type="button" id="9" value="9" onclick="getinput(this.id)">
+						<input type="button" id="0" value="0" onclick="getinput(this.id)">
+						<input type="button" id="clear" value="Clear" onclick="clearbox()">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3" align="center">
+						<input type="button" id="+" value="+" onclick="getoperator(this.id)">
+						<input type="button" id="-" value="-" onclick="getoperator(this.id)">
+						<input type="button" id="/" value="/" onclick="getoperator(this.id)">
+						<input type="button" id="%" value="%" onclick="getoperator(this.id)">
+						<input type="button" id="*" value="*" onclick="getoperator(this.id)">
+						<input type="button" id="=" value="=" onclick="getresult()">
+					</td>
+				</tr>
+			</table>
+		</div>
+	</body>
+</html>

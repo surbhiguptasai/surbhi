@@ -1,0 +1,35 @@
+<html>
+<head>
+<script>
+function test()
+{
+var Qty=document.getElementById("Qty").value;
+var Price=document.getElementById("Price").value;
+if((Qty=="")||(Price=="")||(isNaN(Qty))||(isNaN(Price)))
+{
+alert("Invalid Input");
+}else {
+Total=Qty*Price;
+document.getElementById("Result").value=Total;
+}
+}
+</script>
+</head>
+<body>
+<div id="container" align="center">
+<div id="header">
+<h1>Calculate</h1>
+</div>
+<div>
+Qty:<input type="text" id="Qty" name="Qty">
+<br><br>
+Price:<input type="text" id="Price" name="Price">
+<br><br>
+Result:<input type="text" id="Result" name="Result">
+<br><br>
+ <input type="button" name="btn1" id="btn1" value="Calculate" Onclick="test()">
+</div>
+</div>
+
+</body>
+</html>

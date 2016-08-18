@@ -1,0 +1,21 @@
+<html>
+	<script>
+		function changeshape()
+			{                                   
+				var str="";
+				for(var i=1; i<10; i++)
+			{
+				str=str+"<div style='height:150px;width:150px;background-color:red;border-radius:"+i+"0px;margin:10px;'>Hello</div>";
+				
+			}
+			while(i<0);
+				document.getElementById("content").innerHTML=str;
+			}                                          
+	</script>
+	<body>
+		<h1>Change Shape</h1>
+		<input type="button" value="ShowImages" onclick="changeshape()">
+	
+		<div id="content">No Content</div>
+	</body>
+</html>

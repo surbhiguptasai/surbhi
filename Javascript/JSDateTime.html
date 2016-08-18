@@ -1,0 +1,40 @@
+<html>
+<script>
+var abc;
+function CurrentDateTime()
+{
+var obj=new Date();
+var M=obj.getMinutes();
+alert(M);
+var S=obj.getSeconds();
+alert(S);
+var H=obj.getHours();
+alert(H);
+var Y=obj.getFullYear();
+alert(Y);
+var Marray=["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+var month=obj.getMonth();
+month=Marray[month];
+alert(month);
+var D=obj.getDate();
+alert(D);
+var finaldate=Y+"-"+month+"-"+D+"-"+H+":"+M+":"+S;
+alert(finaldate);
+}
+function NewWindow()
+{
+//window.open("http://www.google.com");
+ abc=window.open("","new page","height=200,width=300,top=80%,left=80%,resizable=no,scrollbar=no,toolbar=no");
+abc.document.write("Hello");
+}
+function Closeabc()
+{
+abc.close();
+}
+</script>
+<body>
+<input type="button" name="btn1" id="btn1" value="Get Date Time" Onclick="CurrentDateTime()">
+<input type="button" name="btn1" id="btn1" value="Open a Window" Onclick="NewWindow()">
+<input type="button" name="btn1" id="btn1" value="Close1" Onclick="Closeabc()">
+</body>
+</html>

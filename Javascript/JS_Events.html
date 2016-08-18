@@ -1,0 +1,46 @@
+<html>
+		<title>JS EVENTS</title>
+	<head>
+		<script>
+			function tst()
+			{
+			alert("Hello");
+			}
+			function tst2(value)
+			{
+			alert(value);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Mouse events example</h1>
+			<input type="button" value="1Click" Onclick="tst()">
+				<br><br>
+			<input type="button" value="2Click" ondblclick="tst()">
+				<br><br>
+			<input type="button" value="MouseMove" onmousemove="tst()">
+				<br><br>
+			<input type="button" value="MouseOut" onmouseout="tst()">
+		<h1>Keyboard events example</h1>
+			onkey press:<input type="text" name="abc" id="abc" onkeypress="tst()">
+				<br><br>
+			onkey down:<input type="text" name="abc" id="abc" onkeydown="tst()">
+				<br><br>
+			onkey up:<input type="text" name="abc" id="abc" onkeyup="tst()">
+				<br><br>
+			onfocus:<input type="text" name="abc" id="abc" onfocus="tst()">
+				<br><br>
+			onblur:<input type="text" name="abc" id="abc" onblur="tst2(this.value)">
+				<br><br>
+			onchange:<select name="state" id="state" onchange="tst2(this.value)">
+							<option value="">Choose State</option>
+							<option value="MP">MP</option>
+							<option value="KA">KA</option>
+							<option value="UP">UP</option>
+							<option value="AP">AP</option>
+					</select>
+				<br><br>
+			<div style="width:200px; height:20px; background-color:green" onclick="tst()">Click Here</div>
+			
+	</body>
+</html>

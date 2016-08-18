@@ -1,0 +1,22 @@
+<html>
+	<script>
+		function ShowAllPhoto()
+			{
+				//alert("OK");                              //while(condition)
+				i=1;                                        //  {statements;increment/Decrement;}
+				var str="";
+				do
+			{
+				str=str+"<img src='image/"+i+".jpg' height='"+i+"00' width='"+i+"00'>";
+				i++;
+			}
+			while(i<0);
+				document.getElementById("content").innerHTML=str;
+			}                                          
+	</script>
+	<body>
+		<h1>DoWhile Loop</h1>
+		<input type="button" value="ShowImages" onclick="ShowAllPhoto()">
+		<div id="content">No Content</div>
+	</body>
+</html>

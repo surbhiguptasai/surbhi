@@ -1,0 +1,23 @@
+<html>
+<script>
+function show(id)
+{
+//alert(id);
+document.getElementById("1").style.display="none";
+document.getElementById("2").style.display="none";
+document.getElementById("3").style.display="none";
+document.getElementById(id).style.display="inline";//block
+}
+</script>
+<body>
+<h1>Image Hide & Show Event</h1>
+<img src="image/1.jpg" height="300" width="300" id="1">hello
+<img src="image/2.jpg" height="300" width="300" id="2"style="display:none">Hello1
+<img src="image/3.jpg" height="300" width="300" id="3"style="display:none">
+<br>
+<hr>
+<img src="image/1.jpg" height="50" width="50" Onmousemove="show(1)">
+<img src="image/2.jpg" height="50" width="50" Onmousemove="show(2)">
+<img src="image/3.jpg" height="50" width="50" Onmousemove="show(3)">
+</body>
+</html>

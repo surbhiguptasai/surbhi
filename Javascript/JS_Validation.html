@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<script>
+		function test()
+		{
+		var name=document.getElementById("abc").value;
+		var email=document.getElementById("email").value;
+		var state=document.getElementById("state").value;
+		var mobile=document.getElementById("mobile").value;
+		name=name.trim();   //ltrim(trim frm left),rtrim(trim frm right),trim(trim frm both sides)
+		if (name=="")
+		{
+		document.getElementById("abc").style.borderColor="red";
+		}
+		else
+		{
+		document.getElementById("abc").style.borderColor="";
+		}
+		//email validation starts below
+		name=email.trim();
+		if (email=="")
+		{
+		document.getElementById("email").style.borderColor="red";
+		}
+		else
+		{
+		document.getElementById("email").style.borderColor="";
+		}
+		//state validation starts below
+		name=state.trim();
+		if (state=="")
+		{
+		document.getElementById("state").style.borderColor="red";
+		}
+		else
+		{
+		document.getElementById("state").style.borderColor="";
+		}
+		//mobile validation starts below
+		name=mobile.trim();
+		if (mobile=="")
+		{
+		document.getElementById("mobile").style.borderColor="red";
+		}
+		else
+		{
+		document.getElementById("mobile").style.borderColor="";
+		}
+		}
+		</script>
+	</head>
+	<body>
+		Name:<input type="text" name="abc" id="abc">
+		<br><br>
+		Email:<input type="text" name="email" id="email">
+		<br><br>
+		State:<select name="state" id="state">
+						<option value="">Choose State</option>
+							<option value="MP">MP</option>
+							<option value="KA">KA</option>
+							<option value="UP">UP</option>
+							<option value="AP">AP</option>
+			  </select>
+			  <br><br>
+			  Mobile:<input type="number" name="mobile" id="mobile">
+		<br><br>
+			  <input type="button" name="btn1" id="btn1" value="Click Now" Onclick="test()">
+	</body>
+</html>

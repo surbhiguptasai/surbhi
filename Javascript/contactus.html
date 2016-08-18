@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Contact Us</title>
+<script>
+function test()
+		{
+		var name=document.getElementById("abc").value;
+		var email=document.getElementById("email").value;
+		var mobile=document.getElementById("mobile").value;
+		var message=document.getElementById("message").value;
+		name=name.trim();
+		var x=1;
+		if (name=="")
+		{
+		document.getElementById("abc").style.borderColor="red";
+		x=0;
+		}
+		else
+		{
+		document.getElementById("abc").style.borderColor="";
+		}
+		//email validation starts below
+		name=email.trim();
+		if (email=="")
+		{
+		document.getElementById("email").style.borderColor="red";
+		x=0;
+		}
+		else
+		{
+		document.getElementById("email").style.borderColor="";
+		}
+		//mobile validation starts below
+		name=mobile.trim();
+		if (mobile=="")
+		{
+		document.getElementById("mobile").style.borderColor="red";
+		x=0;
+		}
+		else
+		{
+		document.getElementById("mobile").style.borderColor="";
+		}
+		//message validation starts below
+		name=message.trim();
+		if (message=="")
+		{
+		document.getElementById("message").style.borderColor="red";
+		x=0;
+		}
+		else
+		{
+		document.getElementById("message").style.borderColor="";
+		}
+		
+		return Boolean(x);
+		}
+</script>
+</head>
+<body>
+<h1>Contact Us</h1>
+<Form name="frm1" method="POST" onsubmit="return test()">
+Full Name:<input type="text" name="abc" id="abc">
+<br><br>
+Email:<input type="text" name="email" id="email">
+<br><br>
+Mobile:<input type="number" maxlength="10" name="mobile" id="mobile">
+<br><br>
+Message:<textarea name="message" id="message" rows="5" cols="23"></textarea>
+<br><br>
+<input type="Submit" name="btn1" id="btn1" value="Send">
+<input type="Reset" name="btn1" id="btn1" value="Reset" Onclick="test()">
+</body>
+</html>
