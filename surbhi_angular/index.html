@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demoApp">
+<head>
+<meta charset="UTF-8">
+	<title>Angular JS Demo</title>
+</head>
+<body>
+<div ng-controller="testCtrl">
+<!-- <input type="text" data-ng-model="name"></input> -->
+<h2>1 controller</h2>
+<h1>{{name}}</h1>
+</div>
+<!-- 1+2={{1+2}} -->
+<!-- <h1>Hello World</h1> -->
+<div data-ng-controller="2Ctrl">
+<h2>2 controller</h2>
+	<h1>{{name}}</h1>
+</div>
+
+<script src="angular.min.js"></script>
+<script src="custom.js"></script>
+</body>
+</html>

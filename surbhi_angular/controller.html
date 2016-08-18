@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+<script src="angular.min.js"></script>
+   <link href="bootstrap_content/css/bootstrap.min.css" rel="stylesheet"/>
+      <link href="bootstrap_content/css/bootstrap-responsive.min.css" rel="stylesheet"/>
+	
+	<script src="ctrl_script.js" ></script>
+   <script src="github.js" ></script>
+   <style>
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th {
+  background-color: #950;
+}
+
+.table-hover tbody tr:hover > td,
+.table-hover tbody tr:hover > th {
+  background-color: #750;
+}
+</style>
+</head>
+<body ng-controller="myctrl" >
+
+<div class="row">
+   
+   <div class="span6">
+   <h1>{{message}}</h1>
+
+   <div> {{error}} </div>
+
+   
+   {{countdown}}
+   <form name="searchName" ng-submit="search(searchuser)">
+   <input type="search" required placeholder="search" ng-model="searchuser" />
+   <input type="submit" value="search" />
+   </form>
+   </div>
+   
+   <div class="span5">
+   <div ng-include="'userdetails.html'" ng-show="user" ></div>
+   </div>
+   </div>
+   
+</body>
+</html>
