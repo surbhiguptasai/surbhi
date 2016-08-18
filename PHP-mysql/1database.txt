@@ -1,0 +1,241 @@
+Q.How to create a database in mysql?
+ans.
+    syntex:
+      create database <dbname>;
+    ex:
+      create database ecommerce;
+	  
+Q.How to create a table in mysql?
+ans.
+    syntex:
+       create table <tablename>
+      (col1 datatype <length>
+       col2 datatype <length>
+       col3 datatype <length>);
+    ex:
+      create table product
+      (proid int(10) auto_increment,
+       name varchar(255),
+       price float,
+       description text(400),
+       primary key(proid) );
+	   
+Q.What is max length of dbname,tablename,column name?
+ans. 
+     min 1 character
+     max 64 character
+     note:can be comination of alphanumeric & underscore but no space.
+Q.how to alter/add new column in existing Mysql table?
+ans. syntex:
+     alter table<tablename>
+     add<new col name><datatype><length>AFTER col name;
+  ex:
+     alter table product
+     add mfd varchar(255);
+   
+     alter table product
+     add vendor varchar(255)after price;
+
+     alter table product
+     add test1 varchar(255)after price,
+     add test2 varchar(255)first;
+Q.How to drop a column from existing Mysql table?
+ans.  syntex:
+     alter table <tablename>
+     drop column<column name>
+        ex.
+      alert table product
+      drop column price;
+
+      alter table product
+      drop column test1,
+      drop column test2;
+Q.How to rename/change a column from existing Mysql table?
+ans.  syntex:
+     alter table <tablename>
+     change<old column name><new column name><new datatype><new size>;
+ex.
+      alter table product
+      change vendor vandor_name  varchar(100),
+      change test1 product_price  int(10);
+Q.how to rename a table in mysql?
+ans.  syntex:
+      rename table<old name>to<new name>;
+  ex:
+     rename table product to product1;
+Q.How to drop table in mysql?
+ans. syntex:
+     drop table<table name>;
+  ex:
+     drop table product1;
+	 
+Q.How to insert data in mysql table?
+ans.  Syntax:
+     insert into<tablename>
+    (col1,col2,col3....)
+	values('val1','val2','val3'...);
+	
+ex:  insert into employee
+(name,email,city)
+values('Abc','abc@gmail.com','bangalore');
+
+insert into employee
+values('','xyz','xyz@gmail.com','9999998899','chennai','1','10000');
+
+Q.how to delete data in mysql table?
+ans. syntex:
+     1. delete from <tablename> ---delete all data at a time
+	 2. delete from <tablename> <condition> ---specific condition wise
+	 3.truncate from <tablename>
+	 
+ex:  delete from employee where id=3;
+    Difference btw delete n truncate??
+	Both r the methods to delete the data from the table.
+	---DELETE---
+	1.DML command(data manipulation)
+	2.Using delete we can delete 1 or more rows at a time.
+	3.using delete primary key index can not be deleted.
+	---TRUNCATE---
+	1.DDL command(data definition)
+	2.It will delete all the data from table,1 row is not possible.
+	3.it'll delete even primary key index as well.
+Q.How to update data in mysql table?
+ans.
+    1.Single row(condition)
+    2.multiple rows(range update)
+
+   syntex for multiple rows:
+          update <tablename>
+         set columnname='new value';
+   ex:
+         update employee
+         set city='Mysore';	
+		 
+		 update employee
+         set city='Mysore',
+		 salary='5000',
+		 dept='3';		
+		 
+	syntex for single row:
+        update <tablename>
+        set	colname='value',
+		    colname='value'
+			
+			<condition>
+		ex:	update employee
+			set salary='2000',
+			city='mysore'
+			where id=1;
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+		 
+Q.How to fetch 2nd highest record from table?
+ans. Syntax:
+         select * from (tablename)order by(coloumnname)limit(start index),(no of record);
+     Ex:
+         select * from employee order by salary Desc;	 
+		 select * from employee order by salary Asc;
+		 select * from employee order by salary Desc limit 1,1;	 //2nd highest salary and 1 record
+		                                             limit 1,2;  //2nd and 3rd highest salary and 2 records
+													 limit 0,1;//1st highest and 1 record
+													 limit 0,3;//1st 3 highest records
+Q.How to sum 
+ans.  Syntax:
+         select sum(columnname)	from <tablename>
+      Ex:
+         select sum(salary)from employee;
+         select sum(salary) as Total Salary from employee;		
+Q.How to count no of records in a mysql table?
+ans.  Syntax:
+         select count(*)from employee;		 //count(*)
+		 select count(*) as Total_user from employee;// Total_user 30
+Q.How to fetch average salary of no of records in a mysql table?		 
+ans.   Syntax:
+		 select avg(column) from <tablename>;
+		Ex:
+		select avg(salary)from employee;
+		 select avg(salary) as average_sal from employee;
+Q.How to fetch unique records in a mysql table?		
+ans. Syntax:
+          select distinct(columnname)from <tablename>
+     Ex:
+          select distinct(name) from emp;
+          select distinct(name)as Unique_user from employee;		  
+Q.How to change column name at display in mysql table?
+ans.  	select name as empname,
+               mobile as modileNo,
+               email as email1d,
+               salary as fullsalary from employee;		
+Q.How to fetch the data from multiple table?
+ans.  select * from employee,department;  //both the tables will come with full data..
+      select employee.name as emp_name,employee.salary as emp_sal,department.name as dept_name from employee,department;
+	  //selected columns will come..
+	  select employee.*,department.name from employee,department where employee.dept=department.id; //direct join
+	  
+	  //--left join--will take all data from left table and only matching data from right table.
+	  select table1.*,table2.* from<table1>
+	  left join table2
+	  on table1.primarykey=table.foreignkey
+	  EX:
+	    select employee.*,department.name as dept_name from employee left join department on employee.dept=department.id;
+	  
+	  select <table1>.* from table1 left join on table2.fid=table1.id;
+	  select employee.*,department.name from employee left join department on employee.dept =department.id; 
+	  //--right join--
+	  select employee.*,department.name as dept_name from employee right join department on employee.dept=department.id;
+	  //--left outer join--
+	  //--right outer join--
+Q.types of keys
+ans.
+    candidate key:in a table all the columns are candidate keys.
+    primary key:in a table responsible column to make relation between 2 or more tables is called primary key.
+	            Intity intigrity-there should not be any null value or duplicate value
+    foreign key:in a table responsible column to make relation between 2 or more tables is called foreign key.
+	            Refrencial Intigrity-should not contain null value and should contain the same value as primary key value.
+    alternate key:candidate key-primary key;
+    composite key:
+Q.	Inner Join
+ans.    select employee.*,department.name as department from employee inner join department on employee.dept=department.id;
+		 --subquery--
+		 select *from employee where dept in(select id from department);
+		 select * from employee where dept in('1','2','3','4','5');
+Q.	PHP opening and closing tags
+    <?PHP
+	?>	 //full tag in php5
+	<?
+	?>   //short tag in php4
+		 
+Q.How to count noof elements inside the array?
+ans.  echo count($ar1);
+      echo"<br>";
+      echo sizeof($ar1);	  
+Q.How to add new element at last of array?
+ans. array_push($ar1,300); //array_unshift($ar1,5) is used to add in the beginning of da array...
+      echo"<pre>";
+      print_r($ar1);
+      echo"<pre>";	  
+Q.How to delete element at last of array?	  
+ans.   array_pop($ar1); //array_shift($ar1) is used to delete from starting of the array...
+      echo"<pre>";
+      print_r($ar1);
+      echo"<pre>";
+		 

@@ -1,0 +1,71 @@
+Q.How to create a database in mysql?
+ans.
+   syntex:
+       create database <dbname>;
+  ex:
+      create database ecommerce;
+Q.How to create a table in mysql?
+ans.
+   syntex:
+       create table <tablename>
+      (col1 datatype <length>
+       col2 datatype <length>
+       col3 datatype <length>);
+  ex:
+      create table product
+      (proid int(10) auto-increment,
+       name varchar(255),
+       price float,
+       description text(400),
+       primary key(proid) );
+Q.What is max length of dbname,tablename,column name?
+ans. min 1 character
+     max 64 character
+     note:can be comination of alphanumeric & underscore but no space.
+Q.how to alter/add new column in existing Mysql table?
+ans. syntex:
+     alter table<tablename>
+     add<new col name><datatype><length>AFTER col name;
+  ex:
+     alter table product
+     add mfd varchar(255);
+   
+     alter table product
+     add vendor varchar(255)after price;
+
+     alter table product
+     add test1 varchar(255)after price,
+     add test2 varchar(255)first;
+Q.How to drop a column from existing Mysql table?
+ans.  syntex:
+     alter table <tablename>
+     drop column<column name>
+        ex.
+      alert table product
+      drop column price;
+
+      alter table product
+      drop column test1,
+      drop column test2;
+Q.How to rename/change a column from existing Mysql table?
+ans.  syntex:
+     alter table <tablename>
+     change<old column name><new column name><new datatype><new size>;
+ex.
+      alter table product
+      change vendor vandor_name  varchar(100),
+      change test1 product_price  int(10);
+Q.how to rename a table in mysql?
+ans.  syntex:
+      rename table<old name>to<new name>;
+  ex:
+     rename table product to product1;
+Q.How to drop table in mysql?
+ans. syntex:
+     drop table<table name>;
+  ex:
+     drop table product1;
+Q.
+
+
+

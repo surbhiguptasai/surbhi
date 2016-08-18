@@ -1,0 +1,25 @@
+1.Connecting to the DB1----
+		$conn=mysql_connect("localhost","root","");
+		mysql_select_db("php_practice",$conn);
+2.Fetching the value in php from the html-form----
+        $name=($_POST['fname']);	fname is from html code ..
+                                <input type="text" name="fname" id="name" placeholder="Enter Your Full Name">	
+3.<?php
+--all the php code should be inside this tag..---
+?>								
+4.To print any message
+       $_SESSION['msg']="<font color='green'>Data Saved Successfully!";
+5.For executing any query in the db(insert,update,delete,select)
+		mysql_query($sql);	   
+6.How to fetch the results from a sql query?
+    $res=mysql_query($sql);
+7.How to fetch the row from the result set?
+    $row=mysql_fetch_array($res);
+8.How to itrate over the resultset?
+    while($row=mysql_fetch_array($res))
+	{
+	----
+	}
+9.How to get the particular	column from the row?
+       .$row['name']
+	
