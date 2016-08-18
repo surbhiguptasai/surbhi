@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="angular.min.js"></script>
+
+</head>
+<body ng-app="myapp">
+<div ng-controller="myController">
+<b>
+Welcome to the {{message.courseProvider}} tutorial of {{message.courseName}}
+</b>
+</div>
+</body>
+<script>
+angular.module("myapp",[])
+.controller("myController",function($scope){
+$scope.message={};
+$scope.message.courseProvider="edureka";
+$scope.message.courseName="AngularJS";
+
+});
+</script>
+</html>
