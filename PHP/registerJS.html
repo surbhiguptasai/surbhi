@@ -1,0 +1,61 @@
+<html>
+<head>
+<title> Register </title>
+<script>
+function test() {
+	alert("inside test");
+	var username = document.getElementById('user_id').value;
+	alert("username is " + username);
+	var password = document.getElementById('Password').value;
+	var errormessage = "";
+	alert("username is " + username);
+	var Exp = /^[a-z]+$/;
+
+	if (!username.match(Exp)) {
+		alert("User Name Validation");
+		errormessage = errormessage + "User Name should be alpha !! " + "<br/>";
+
+	}
+
+	if (!password.match(Exp)) {
+		alert("Password Validation");
+		errormessage = errormessage + "Password should be alpha !!";
+	}
+
+	if (errormessage == "")
+		return true;
+	else {
+		//errormessage.style.color='red';
+		document.getElementById('errormessage').style.color = 'red';
+		document.getElementById('errormessage').style.textAlign = 'center';
+		document.getElementById('errormessage').innerHTML = errormessage;
+		return false;
+	}
+}
+</script>
+</head>
+<body>
+<p id="errormessage"> </p>
+<Form id="frm1" method="POST" action="abc.php" onSubmit="return test();">
+	<center>
+		<h2 id="user"> User Registration </h2>
+		
+			<div>
+				<b>User Id:</b>
+				<input type="text" name="user_id" id="user_id" placeholder="Enter Your Userid">
+			</div>
+			<br>
+			<div>
+				<b>Password:</b>
+				<input type="Password" name="Password" id="Password" maxlength="6" Placeholder="Enter 6 character password"/>
+			</div>
+			<div>
+			    <input type="submit" name="submit" id="submit" value="Submit" />
+			    <input type="Button" value="Reset" id="btn2" name="btn2">
+			</div>
+
+
+	</center>
+	</form>
+</body>
+</html>

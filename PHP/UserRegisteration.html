@@ -1,0 +1,81 @@
+<html>
+<head>
+<title> Register </title>
+</head>
+<body>
+<Form id="frm1" method="POST" action="abc.php">
+	<center>
+		<h2> User Registration </h2>
+		<hr color="blue" size="6">
+			<div>
+				<b>Full Name:</b>
+				<input type="text" name="full_name" id="full_name" placeholder="Enter Your Full Name">
+			</div>
+			<br>
+			<div>
+				<b>Email Id:</b>
+				<input type="text" name="email_id" id="email_id" placeholder="Enter Your Emailid">
+			</div>
+			<br>
+			<div>
+				<b>Password:</b>
+				<input type="Password" name="Password" id="Password" maxlength="6" Placeholder="Enter 6 character password"/>
+			</div>
+			<br>
+			<div>
+			    <b>Mobile No.:</b>
+			    <input type="text" name="Mobile" id="Mobile" placeholder="Enter Your Mobile" maxlength="10">
+			</div>
+			<br>
+			<div>
+			    <b>Gender:</b>
+			    <input type="radio" name="abc" id="male" value="Male"/> Male
+				<input type="radio" name="abc" id="Female" value="Female"/> Female
+			</div>
+			<div>
+			<fieldset>
+			<legend>
+				<b>Address:</b> 
+			</legend>
+		    <br>
+			<div>
+			    <b>Line1</b>
+			    <textarea></textarea>
+			</div>
+			<div>
+			    <b>State</b>
+			    <select>
+				     <option> Choose State</option>
+					 <option value="KA"> KA</option>
+					 <option value="MP"> MP</option>
+				</select>
+			</div>
+			<div>
+			    <b>City</b>
+			    <select>
+				     <option> Choose City</option>
+					 <option value="Bangalore"> Bangalore</option>
+					 <option value="abc1"> abc1</option>
+					 <option value="abc2"> abc2</option>
+					 <option value="abc3"> abc3</option>
+				</select>
+			</div>
+			<div>
+			    <b>Pincode</b>
+			    <input type="text" placeholder="Enter Pincode" maxlength="6">
+			</div>
+			<div>
+			    <b>File Upload:</b>
+			    <input type="file" id="file" name="file">
+			</div>
+			<div>
+			    <input type="Submit" value="Save" id="btn1" name="btn1">
+			    <input type="Button" value="Reset" id="btn2" name="btn2">
+			</div>
+			</fieldset>
+			</div>
+
+	</center>
+	</form>
+</body>
+</html>

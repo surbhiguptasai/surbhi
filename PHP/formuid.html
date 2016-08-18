@@ -1,0 +1,48 @@
+<html>
+<script>
+function formvalidation() {
+	var errormsg = "";
+	var userid = document.getElementById('user_id').value;
+	var Exp = /^[a-z]+$/;
+
+	if (!userid.match(Exp)) {
+		//alert("User Name Validation");
+		errormsg = errormsg + "User Name should be alphabet !! " + "<br/>";
+
+	}
+	if (errormsg != "") {
+		document.getElementById('error').innerHTML += errormsg;
+		document.getElementById('error').style.color = 'red';
+		document.getElementById('error').style.textAlign = 'center';
+
+		return false;
+	}
+	return true;
+}
+</script>
+<body>
+
+<Form id="form" action="abc" method="POST" onSubmit="return formvalidation();">
+
+<h1>Register</h1>
+<table>
+<tr>
+<td>
+<b>User id</b>
+</td>
+<td>
+<input type="text" id="user_id" placeholder="Enter Your Userid">
+</td>
+<td>
+<p id="error"></p>
+</td>
+</tr>
+<tr>
+<td>
+<input type="SUBMIT" value="Submit11" />
+</td>
+</tr>
+</table>
+</form>
+</body>
+</html>

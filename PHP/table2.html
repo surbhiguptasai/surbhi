@@ -1,0 +1,85 @@
+<html>
+<head>
+<title>Table Example</title>
+</head>
+<body bgcolor="orange">
+<form>
+<table border="20" align="center" width="500" bgcolor="blue" cellspacing="7" cellpadding="10">
+<caption><h1>SignUp</h1></caption>
+	<tr>
+		<th align="right">Full Name</th>
+		<td><input type="text" name="full_name" id="full_name" placeholder="Enter Full Name"/></td>
+	</tr>
+	<tr>
+		<th>Email Id:</th>
+		<td><input type="email" name="email_id" id="email_id" placeholder="Enter Your Emailid"></td>
+	</tr>
+	<tr>
+		<th>Password:</th>
+		<td><input type="Password" name="Password" id="Password" maxlength="6" Placeholder="Enter 6 character password"/></td>
+	</tr>
+	<tr>
+		<th>Mobile No.:</th>
+		<td><input type="number" name="Mobile" id="Mobile" placeholder="Enter Your Mobile" maxlength="12"></td>
+	</tr>
+	<tr>
+		<th>Gender:</th>
+		<td> <input type="radio" name="xyz" id="Male" value="Male"/>Male
+			<input type="radio" name="xyz" id="Female" value="Female"/>Female</td>
+    </tr>
+	<tr><td colspan="2">
+	
+	<fieldset>
+	    
+			<legend>
+				<b>Address:</b> 
+			</legend>
+		    <table>
+		<tr><th>Line1</th>
+			<td> <textarea></textarea></td>
+		</tr>
+			
+		<tr><th>State</th>
+		<td>
+					<select>
+				     <option> Choose State</option>
+					 <option value="KA"> KA</option>
+					 <option value="MP"> MP</option>
+					 </select>
+	    </td>
+	    </tr>
+	    <tr>
+			<th>City</th>
+		<td> 
+				<select>
+				     <option> Choose City</option>
+					 <option value="Bangalore"> Bangalore</option>
+					 <option value="abc1"> abc1</option>
+					 <option value="abc2"> abc2</option>
+					 <option value="abc3"> abc3</option>
+				</select>
+		</td>
+		</tr>
+		<tr>
+			<th>Pincode</th>
+		<td><input type="text" placeholder="Enter Pincode" maxlength="6"> </td>
+		</tr>	
+		    </table>
+			</fieldset>
+		</td>
+		</tr>
+		<tr>
+				<th>File Upload:</th>
+		<td><input type="file" id="file" name="file"></td>
+		</tr>
+		<tr>
+				<td colspan="2" align="center"> 
+				<input type="Submit" value="Save" id="btn1" name="btn1">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input type="Reset" value="Reset" id="btn2" name="btn2">
+		</td>
+		</tr>
+</table>
+</form>
+</body>
+</html>

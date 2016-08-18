@@ -1,0 +1,57 @@
+<html>
+<head>
+<title> Test Page </title>
+</head>
+<body>
+<Form id="frm1" method="POST" action="abc.php">
+<h1> Form tag list </h1>
+Full Name:<input type="text" name="full_name"
+id="full_name" 
+Placeholder="Enter ur name" maxlength="10" size="100"
+readonly="read only"
+disabled="disabled" />
+
+<br><br>
+
+Password:<input type="Password" name="Password"
+id="Password"
+maxlength="6"
+Placeholder="Enter 6 character password"/>
+
+<br><br>
+
+Gender:<input type="radio" name="abc" id="male" value="Male"/> Male
+       <input type="radio" name="abc" id="Female" value="Female"/> Female
+
+<br><br>
+
+City:<select name="city" id="city">
+<option value=""> Choose City</option>
+	   <option value="Bangalore"> Bangalore</option>
+	   <option value="Chennai"> Chennai</option>
+	   <option value="Mumbai"> Mumbai</option>
+	   <option value="Delhi"> Delhi</option>
+</select>
+
+<br><br>
+
+Address: <br>
+<textarea name="address" id="address" rows="20" cols="70">
+</textarea>
+
+<br><br>
+
+FileUpload:<input type="file" id="file" name="file"/>
+
+<br><br>
+<input type="checkbox" name="terms" id="terms" value="Agree" checked="checked" disabled="disabled"/> Terms & Conditions
+<br><br>
+<input type="submit" name="btn1" id="btn1" value="Register"/>
+<br><br>
+<input type="reset" name="btn2" id="btn2" value="Reset Form"/>
+<br><br>
+<input type="button" name="btn3" id="btn3" value="Save"/>
+
+</Form>
+</body>
+</html>
